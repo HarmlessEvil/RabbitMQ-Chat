@@ -22,7 +22,7 @@ public class EmitLog {
 
         ConnectionFactory factory = new ConnectionFactory();
         factory.setHost("localhost");
-        factory.setPort(32769);
+        factory.setPort(5672);
         try (Connection connection = factory.newConnection();
              Channel channel = connection.createChannel()) {
             String username = argv.length < 1 ? "guest" : argv[0];
